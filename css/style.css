@@ -1,0 +1,81 @@
+body {
+    font-family: 'News Cycle', sans-serif;
+}
+
+/*------------Footer------------*/
+footer {
+    margin-left: 0px;
+    padding: 30px 15px 0px 15px;
+    background-color: #f8f9fa;
+    color: rgba(0, 0, 0, .9);
+}
+
+.footer-row {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .footer-row-cols {
+        width: auto;
+        margin-top: auto;
+        text-align: justify;
+    }
+}
+
+.footer-row-cols h6 {
+    font-family: 'Pinyon Script';
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-row-cols ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.footer-row-cols li a {
+    font-size: small;
+    color: rgba(0, 0, 0, .5);
+}
+
+footer ul li a:hover {
+    color: rgba(0, 0, 0, .9);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.footer-col {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.social-links li a i {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-right: 5px;
+    display: block;
+}
+
+.social-links li a i:hover {
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.copyright-col {
+    text-align: center;
+}
+
+.copyright-col p {
+    font-size: smaller;
+}
