@@ -54,7 +54,7 @@
     <section id="about">
         <div class="container about-row">
             <div class="row" id='about-row'>
-                <h2>About</h2>
+                <h2 class="section-head">About</h2>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <p class='about-p'>Planning the dream wedding that you have been romanticising about is an exciting but often overwhelming time and hiring a professional wedding planning assistant is not always an option.</p>
@@ -72,7 +72,7 @@
     <section class="jumbotron" id="planning">
         <div class="container scroll-planning">
             <div class="row" id='planning-row'>
-                <h2>Planning</h2>
+                <h2 class="section-head">Planning</h2>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-4 planning-col">
@@ -118,7 +118,7 @@
         <div class="container-fluid inspiration">
             <div class="row inspiration-row">
                 <div class="col-12">
-                    <h2>Inspiration</h2>
+                    <h2 class="section-head">Inspiration</h2>
                     <p>Your wedding theme and colour choice will set the tone for your whole day. Search for ideas and inspiration from our photo gallery below </p>
                 </div>
             </div>
@@ -294,13 +294,14 @@
     <!--********./INSPIRATION********-->
 
     <!--********SUPPLIERS********-->
-    <section class="jumbotron" id="suppliers">
+    <section id="suppliers">
         <div class="container-fluid scroll-suppliers">
             <div class="col-12">
-                <h2>Search for Suppliers</h2>
+                <h2 class="section-head">Suppliers</h2>
+                <p>Search for suppliers in your area...</p>
                 <div class="supplier-form form-inline">
                     <select class="custom-select select-location" required>
-                                <option value="" disabled selected hidden>Select Location</option>
+                        <option value="" disabled selected hidden>Select Location</option>
                                 <optgroup label="England">
                                 <option>Bedfordshire</option>
                                 <option>Berkshire</option>
@@ -424,20 +425,20 @@
                     </select>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12 col-md-4">
-                    <div id="map"></div>
-                </div>
-                <div class="col-xs-12 col-md-8">
-                    <h4>Search Results</h4>
-                    <div id="supplierResults">
-                        <table id="resultsTable">
-                            <tbody id="results"></tbody>
-                        </table>
-                    </div>
-                </div>
-
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div id="map"></div>
             </div>
+            <div class="col-xs-12 col-md-8">
+                <h3>Results</h3>
+                <div id="supplierResults">
+                    <table id="resultsTable">
+                        <tbody id="results"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
         </div>
     </section>
     <!--********./SUPPLIERS********-->
@@ -449,10 +450,10 @@
             <div class="row">
                 <div class="col-sm-6 col-md-6"></div>
                 <div class="col-xs-12 col-sm-6 contact-form">
-                    <h2 id="contact-head">Contact</h2>
+                    <h2 class="section-head">Contact</h2>
                     <p>We would love to hear from you...</p>
                     <form id='contact-form'>
-                        
+
                         <div class="form-group">
                             <input type="text" class="form-control" id="exampleInputName" name='Name' placeholder="Name" required>
                         </div>
