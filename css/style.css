@@ -1,55 +1,210 @@
 body {
     font-family: 'News Cycle', sans-serif;
+    position: relative;
 }
 
-/*------------Inspiration Cards-----------*/
+/*------------Navigation-----------*/
+
+.navbar {
+    background: none;
+    border-color: rgba(0, 0, 0, .5);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-right: 1%;
+    margin-top: 1%;
+    text-align: right;
+}
+
+.navbar-toggler {
+    float: right!important;
+    display: block;
+}
+
+.navbar-collapse {
+    text-align: right;
+    border-top: 1px solid transparent;
+    overflow-x: hidden;
+}
+
+.navbar-nav {
+    margin-top: 10px;
+}
+
+.navbar-nav li {
+    margin: 7px 0px 7px 0px;
+}
+
+.navbar-nav li a {
+    color: rgba(0, 0, 0, .5);
+}
+
+.navbar .navbar-nav li a:hover {
+    color: rgba(0, 0, 0, .9);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .navbar-nav li a:active {
+    color: rgba(0, 0, 0, .9);
+}
+
+/*------------Jumbotrons-----------*/
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-attachment: fixed;
+    background-position: bottom;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#landing-jumbotron {
+    background-image: url('../assets/media/landing.jpg');
+}
+
+#planning-jumbotron {
+    background-image: url('../assets/media/.jpg');
+}
+
+#suppliers-jumbotron {
+    background-image: url('../assets/media/.jpg');
+}
+
+@media (max-width: 1199.98px) {
+    .jumbotron {
+        background-attachment: scroll;
+    }
+}
+
+/*------------Landing-----------*/
+
+.landing {
+    padding-left: 10px;
+    margin-top: 2%;
+}
+
+.brand-name {
+    font-family: 'Pinyon Script';
+    font-size: 5.5em;
+    font-weight: bolder;
+}
+
+.brand-p {
+    font-size: 2em;
+}
+
+/*------------About-----------*/
+
+/*------------Planning-----------*/
+
+/*------------Inspiration-----------*/
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
 .flip-card {
-  background-color: transparent;
-  width: auto;
-  height: 300px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    background-color: transparent;
+    width: auto;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
+
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1s;
-  transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
+
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
 }
 
 /* Style the front side (fallback if image is missing) */
+
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+    background-color: #bbb;
+    color: black;
 }
 
 /* Style the back side */
+
 .flip-card-back {
-  background-color: white;
-  color: black;
-  font-size: small;
-  transform: rotateY(180deg);
+    background-color: white;
+    color: black;
+    font-size: small;
+    transform: rotateY(180deg);
 }
 
+/*------------Suppliers-----------*/
+
+/*------------Contact-----------*/
+
+#contact {
+    background-attachment: fixed;
+    background-image: url('../assets/media/ContactUs.jpg');
+    background-position: left;
+    background-size: cover;
+    padding-bottom: 100px;
+    padding-top: 42px;
+    text-align: left;
+
+}
+
+.contact-form {
+    position: relative;
+    top: 6%;
+}
+
+.contact-btn {
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+#contact-head {
+    letter-spacing: 6px;
+    font-size: 3rem;
+    margin: 30px -11px 25px 0px;
+}
+
+.contact-form p {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.contact {
+    margin: 15px 0px 15px 0px;
+}
+
+.form-text {
+    letter-spacing: 1px;
+}
 /*------------Footer------------*/
+
 footer {
     margin-left: 0px;
     padding: 30px 15px 0px 15px;
