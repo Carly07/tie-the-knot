@@ -25,8 +25,6 @@ body {
 .navbar-collapse {
     text-align: right;
     border-top: 1px solid transparent;
-    background-color: #fff;
-    opacity: 0.9;
     overflow-x: hidden;
 }
 
@@ -36,6 +34,8 @@ body {
 
 .navbar-nav li {
     margin: 7px 0px 7px 0px;
+    background-color: #fff;
+    opacity: 0.9;
 }
 
 .navbar-nav li a {
@@ -115,6 +115,7 @@ body {
     width: 120px;
     height: 3px;
     border: 0;
+    margin-bottom: 10px;
     background-color: #739d8b;
 }
 
@@ -132,6 +133,11 @@ body {
     letter-spacing: 1px;
 }
 
+.about-col {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 /*------------Planning-----------*/
 
 #planning {
@@ -145,7 +151,7 @@ body {
 }
 
 .planning-row {
-    padding: 80px 0px 80px 0px;
+    padding: 60px 0px 60px 0px;
 }
 
 .col-xs-12 {
@@ -218,6 +224,8 @@ body {
 #inspiration-p {
     font-size: 1.3rem;
     letter-spacing: 1px;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .inspiration-row {
@@ -369,6 +377,8 @@ body {
 #suppliers p {
     font-size: 1.5rem;
     letter-spacing: 3px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 #suppliers h3 {
@@ -376,14 +386,36 @@ body {
     letter-spacing: 3px;
 }
 
-/*------------Gallery-----------*/
+/*------------Featured-----------*/
 
-#gallery {
+#featured {
     background-color: #f8f9fa;
     padding-bottom: 100px;
     padding-top: 42px;
 }
 
+.featured-row {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.featured-card {
+    height: 26em;
+}
+
+.featured-card img {
+    height: 17em;
+}
+
+.featured-header a {
+    color: #739d8b;
+    text-decoration: none;
+}
+
+.featured-header a:hover {
+    color: #1f7953;
+    font-weight: bold;
+}
 /*------------Contact-----------*/
 
 #contact {
@@ -425,6 +457,8 @@ body {
     font-weight: bold;
     letter-spacing: 3px;
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .contact {

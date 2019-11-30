@@ -36,7 +36,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#planning">Planning</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#inspiration">Inspiration</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#suppliers">Suppliers</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#featured">Featured</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                             </ul>
                         </div>
@@ -65,9 +65,9 @@
             <div class="container about-container">
                 <div class="col-12">
                     <h2 class="section-head">About</h2>
-                    <hr class="block-divider divider-short">
+                    <hr class="block-divider">
                 </div>
-                <div class="col-12">
+                <div class="col-12 about-col">
                     <p>Planning the dream wedding that you have been romanticising about is an exciting but often overwhelming time and hiring a professional wedding planner to assist you is not always an option.</p>
                     <p>Fear not, Tie the Knot is a virtual wedding planning service providing you with the combined knowledge, expertise and experience of the very best wedding planners in the field.</p>
                     <p>Get ideas and inspiration, search for suppliers and use our step by step guide for stress free planning.</p>
@@ -85,7 +85,7 @@
                 <div class="row">
                     <div class="col-12">
                         <h2 class="section-head">Planning</h2>
-                        <hr class="block-divider divider-short">
+                        <hr class="block-divider">
                     </div>
                 </div>
                 <div class="row planning-row">
@@ -139,7 +139,7 @@
                 <div class="row">
                     <div class="col-12">
                         <h2 class="section-head">Inspiration</h2>
-                        <hr class="block-divider divider-short">
+                        <hr class="block-divider">
                         <p id="inspiration-p">Your wedding theme and colour choice will set the tone for your whole day. Check out our top 10 wedding themes below...</p>
                     </div>
                 </div>
@@ -322,8 +322,8 @@
                 <div class="row">
                     <div class="col-12">
                         <h2 class="section-head">Suppliers</h2>
-                        <hr class="block-divider divider-short">
-                        <p>Search for suppliers in your area...</p>
+                        <hr class="block-divider">
+                        <p class="suppliers-p">Search for suppliers in your area...</p>
                         <div class="supplier-form form-inline">
                             <select class="custom-select select-location" required>
                         <option value="" disabled selected hidden>Select Location</option>
@@ -468,64 +468,59 @@
         </section>
         <!--********./SUPPLIERS********-->
 
-        <!--********GALLERY********-->
-        <section id="gallery">
-            <div class="container scroll-gallery">
+        <!--********FEATURED********-->
+        <section id="featured">
+            <div class="container scroll-featured">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-head">Gallery</h2>
-                        <hr class="block-divider divider-short">
+                        <h2 class="section-head">Featured</h2>
+                        <hr class="block-divider">
                     </div>
                 </div>
-                <!--Carousel Wrapper-->
-
-                <div id="gallery-slideshow" class="carousel slide carousel-fade" data-ride="carousel">
-
-                    <!--Indicators-->
-
-                    <ol class="carousel-indicators">
-                        <li data-target="#gallery-slideshow" data-slide-to="0" class="active"></li>
-                        <li data-target="#gallery-slideshow" data-slide-to="1"></li>
-                        <li data-target="#gallery-slideshow" data-slide-to="2"></li>
-                    </ol>
-
-                    <!--/.Indicators-->
-
-                    <!--Slides-->
-
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active" data-interval="2000">
-                            <img src="assets/media/slide1.jpg" class="d-block w-100" alt="First slide">
-                        </div>
-                        <div class="carousel-item" data-interval="2000">
-                            <img src="assets/media/slide2.jpg" class="d-block w-100" alt="Second slide">
-                        </div>
-                        <div class="carousel-item" data-interval="2000">
-                            <img src="assets/media/slide3.jpg" class="d-block w-100" alt="Third slide">
+                <div class="row featured-row">
+                    <div class="col-xs-12 col-sm-4 featured-col">
+                        <div class="card featured-card bg-light text-center">
+                            <div class="d-flex">
+                                <img src="assets/media/featured/crawleys2.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body featured-body">
+                                <div class="card-header featured-header">
+                                    <a target="_blank" href="https://the-crawleys.com/"><h5 class="card-title featured-title">The Crawleys | Photograpy</h5></a>
+                                </div>
+                                <p class="card-text featured-text">Multi award winning international wedding photographers</p>
+                            </div>
                         </div>
                     </div>
-
-                    <!--Slides-->
-
-                    <!--Controls-->
-
-                    <a class="carousel-control-prev" href="#gallery-slideshow" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-                    <a class="carousel-control-next" href="#gallery-slideshow" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-
-                    <!--/.Controls-->
-
+                    <div class="col-xs-12 col-sm-4 featured-col">
+                        <div class="card featured-card bg-light text-center">
+                            <div class="d-flex">
+                                <img src="assets/media/featured/twigs&greens1.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body featured-body">
+                                <div class="card-header featured-header">
+                                    <a target="_blank" href="http://www.twigsandgreens.co.uk/"><h5 class="card-title featured-title">Twigs & Greens | Florist</h5></a>
+                                </div>
+                                <p class="card-text featured-text">West Cornwall florist specialising in all things natural, rustic and beautiful</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 featured-col">
+                        <div class="card featured-card bg-light text-center">
+                            <div class="d-flex">
+                                <img src="assets/media/featured/emma2.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body featured-body">
+                                <div class="card-header featured-header">
+                                    <a target="_blank" href="https://www.emmabeaumont.com/"><h5 class="card-title featured-title">Emma Beaumont | Dressmaker</h5></a>
+                                </div>
+                                <p class="card-text featured-text">For beautifully handcrafted, bespoke bridalwear</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!--/.Carousel Wrapper-->
             </div>
         </section>
-        <!--********./GALLERY********-->
+        <!--********./FEATURED********-->
 
         <!--********CONTACT********-->
 
@@ -535,7 +530,7 @@
                     <div class="col-sm-12 col-md-6"></div>
                     <div class="col-sm-12 col-md-6 contact-form">
                         <h2 class="section-head">Contact</h2>
-                        <hr class="block-divider divider-short">
+                        <hr class="block-divider">
                         <p>We would love to hear from you...</p>
                         <form id='contact-form'>
 
