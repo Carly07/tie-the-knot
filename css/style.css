@@ -371,14 +371,19 @@ body {
     background-size: cover;
     padding-bottom: 100px;
     padding-top: 42px;
-    text-align: left;
+    text-align: center;
 }
 
 #suppliers p {
     font-size: 1.5rem;
     letter-spacing: 3px;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.supplier-form {
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 #suppliers h3 {
@@ -386,6 +391,11 @@ body {
     letter-spacing: 3px;
 }
 
+#map {
+    margin-top: 60px;
+    height: 400px;
+    width: 400px;
+}
 /*------------Featured-----------*/
 
 #featured {
