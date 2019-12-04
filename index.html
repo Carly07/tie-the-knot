@@ -8,12 +8,15 @@
     <meta name="description" content="Tie the Knot is an online wedding planning service offering advice, inspiration and wedding suppliers to help you plan your perfect day." />
     <meta name="author" content="Carly Clark" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <script src="https://kit.fontawesome.com/dec7c3a058.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=News+Cycle|Pinyon+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+
     <title>Tie the Knot | Your Wedding Planning Assistant</title>
+
 </head>
 
 <body data-spy="scroll" data-target="#navbarScroll">
@@ -325,119 +328,7 @@
                     <hr class="block-divider">
                     <p class="suppliers-p">Search for suppliers in your area...</p>
                     <div class="supplier-form form-inline">
-                        <select class="custom-select select-location" required>
-                        <option value="" disabled selected hidden>Select Location</option>
-                                <optgroup label="England">
-                                <option>Bedfordshire</option>
-                                <option>Berkshire</option>
-                                <option>Bristol</option>
-                                <option>Buckinghamshire</option>
-                                <option>Cambridgeshire</option>
-                                <option>Cheshire</option>
-                                <option>City of London</option>
-                                <option>Cornwall</option>
-                                <option>Cumbria</option>
-                                <option>Derbyshire</option>
-                                <option>Devon</option>
-                                <option>Dorset</option>
-                                <option>Durham</option>
-                                <option>East Riding of Yorkshire</option>
-                                <option>East Sussex</option>
-                                <option>Essex</option>
-                                <option>Gloucestershire</option>
-                                <option>Greater London</option>
-                                <option>Greater Manchester</option>
-                                <option>Hampshire</option>
-                                <option>Herefordshire</option>
-                                <option>Hertfordshire</option>
-                                <option>Isle of Wight</option>
-                                <option>Kent</option>
-                                <option>Lancashire</option>
-                                <option>Leicestershire</option>
-                                <option>Lincolnshire</option>
-                                <option>Merseyside</option>
-                                <option>Norfolk</option>
-                                <option>North Yorkshire</option>
-                                <option>Northamptonshire</option>
-                                <option>Northumberland</option>
-                                <option>Nottinghamshire</option>
-                                <option>Oxfordshire</option>
-                                <option>Rutland</option>
-                                <option>Shropshire</option>
-                                <option>Somerset</option>
-                                <option>South Yorkshire</option>
-                                <option>Staffordshire</option>
-                                <option>Suffolk</option>
-                                <option>Surrey</option>
-                                <option>Tyne and Wear</option>
-                                <option>Warwickshire</option>
-                                <option>West Midlands</option>
-                                <option>West Sussex</option>
-                                <option>West Yorkshire</option>
-                                <option>Wiltshire</option>
-                                <option>Worcestershire</option>
-                            </optgroup>
-                            <optgroup label="Wales">
-                                <option>Anglesey</option>
-                                <option>Brecknockshire</option>
-                                <option>Caernarfonshire</option>
-                                <option>Carmarthenshire</option>
-                                <option>Cardiganshire</option>
-                                <option>Denbighshire</option>
-                                <option>Flintshire</option>
-                                <option>Glamorgan</option>
-                                <option>Merioneth</option>
-                                <option>Monmouthshire</option>
-                                <option>Montgomeryshire</option>
-                                <option>Pembrokeshire</option>
-                                <option>Radnorshire</option>
-                            </optgroup>
-                            <optgroup label="Scotland">
-                                <option>Aberdeenshire</option>
-                                <option>Angus</option>
-                                <option>Argyllshire</option>
-                                <option>Ayrshire</option>
-                                <option>Banffshire</option>
-                                <option>Berwickshire</option>
-                                <option>Buteshire</option>
-                                <option>Cromartyshire</option>
-                                <option>Caithness</option>
-                                <option>Clackmannanshire</option>
-                                <option>Dumfriesshire</option>
-                                <option>Dunbartonshire</option>
-                                <option>East Lothian</option>
-                                <option>Fife</option>
-                                <option>Inverness-shire</option>
-                                <option>Kincardineshire</option>
-                                <option>Kinross</option>
-                                <option>Kirkcudbrightshire</option>
-                                <option>Lanarkshire</option>
-                                <option>Midlothian</option>
-                                <option>Morayshire</option>
-                                <option>Nairnshire</option>
-                                <option>Orkney</option>
-                                <option>Peeblesshire</option>
-                                <option>Perthshire</option>
-                                <option>Renfrewshire</option>
-                                <option>Ross-shire</option>
-                                <option>Roxburghshire</option>
-                                <option>Selkirkshire</option>
-                                <option>Shetland</option>
-                                <option>Stirlingshire</option>
-                                <option>Sutherland</option>
-                                <option>West Lothian</option>
-                                <option>Wigtownshire</option>
-                            </optgroup>
-                            <optgroup label="Northern Ireland">
-                                <option>Antrim</option>
-                                <option>Armagh</option>
-                                <option>Down</option>
-                                <option>Fermanagh</option>
-                                <option>Londonderry</option>
-                                <option>Tyrone</option>
-                            </optgroup>
-                        </select>
-                        <select class="custom-select select-category" required>
+                        <select class="custom-select select-category" id="category" required>
                         <option value="" disabled selected hidden>Select Category</option>
                         <option value="Beauty">Beauty</option>
                         <option value="Bridalwear">Bridalwear</option>
@@ -448,20 +339,49 @@
                         <option value="Photographers">Photographers</option>
                         <option value="Venues">Venues</option>
                     </select>
+                        <input class="form-control" id="autocomplete" placeholder="Enter a city" type="text" />
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12 col-md-5">
+            <div class="row map-row">
+                <div class="col-sm-12 col-md-6 map-col">
                     <div id="map"></div>
                 </div>
-                <div class="col-sm-12 col-md-7">
+                <div class="col-sm-12 col-md-6 results-col">
                     <h3>Results</h3>
                     <div id="supplierResults">
                         <table id="resultsTable">
                             <tbody id="results"></tbody>
                         </table>
                     </div>
+
+                    <div style="display: none">
+                        <div id="info-content">
+                            <table>
+                                <tr id="iw-url-row" class="iw_table_row">
+                                    <td id="iw-icon" class="iw_table_icon"></td>
+                                    <td id="iw-url"></td>
+                                </tr>
+                                <tr id="iw-address-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Address:</td>
+                                    <td id="iw-address"></td>
+                                </tr>
+                                <tr id="iw-phone-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Telephone:</td>
+                                    <td id="iw-phone"></td>
+                                </tr>
+                                <tr id="iw-rating-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Rating:</td>
+                                    <td id="iw-rating"></td>
+                                </tr>
+                                <tr id="iw-website-row" class="iw_table_row">
+                                    <td class="iw_attribute_name">Website:</td>
+                                    <td id="iw-website"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -538,19 +458,19 @@
                     <h2 class="section-head">Contact</h2>
                     <hr class="block-divider">
                     <p>We would love to hear from you...</p>
-                    <form id='contact-form'>
+                    <form onsubmit="return sendMail(this);">
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputName" name='Name' placeholder="Name" required>
+                            <input type="text" class="form-control" id="exampleInputName" name="name" placeholder="Name" required>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail" name='Email' placeholder="Email" required>
+                            <input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="Email" required>
                             <small id="emailHelp" class="form-text">We will never share your details with anyone else.</small>
                         </div>
 
                         <div class="form-group">
-                            <select class="custom-select" required>
+                            <select class="custom-select" name="type" required>
                                 <option value="" disabled selected hidden>Type of Enquiry</option>
                                 <option value="Advertise with us">Advertising with Tie the Knot</option>
                                 <option value="Wedding Planning advice">Wedding Planning query or advice</option>
@@ -562,7 +482,7 @@
                             <textarea class="form-control" name="message" rows="6" placeholder="Type your message here..." required></textarea>
                         </div>
 
-                        <input type="submit" value='Send' class="btn btn-default btn-light contact-btn">
+                        <button type="submit" value='Send' class="btn btn-default btn-light contact-btn">Send</button>
                     </form>
                 </div>
             </div>
@@ -637,19 +557,16 @@
         </div>
     </footer>
     <!--********/.FOOTER********-->
-    <script>
-        function initMap() {
-            var uk = { lat: 54.8812882, lng: -3.6730459 };
-            var map = new google.maps.Map(
-                document.getElementById('map'), { zoom: 5, center: uk });
-        }
-    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCodw-QAW9pim23ECC7SUPWaxH3dUCvV4&callback=initMap" type="text/javascript"></script>
-    <script src="/js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript" src="./js/main.js" defer></script>
+    <script type="text/javascript" src="./js/sendEmail.js"></script>
+
 </body>
 
 </html>
