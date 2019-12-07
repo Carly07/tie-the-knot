@@ -12,12 +12,14 @@ function sendMail(contactForm) {
             function(error) {
                 console.log("FAILED", error);
             });
-        return false;
+    return false;
 }
 
 function clickAlert(event) {
     if (document.getElementById("contactForm").reportValidity()) {
         alert("Thank you for contacting Tie the Knot");
+        document.getElementById("contactform").reset();
     }
+    return false;
 }
 document.getElementById("submit").onclick = clickAlert;
