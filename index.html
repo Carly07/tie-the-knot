@@ -484,7 +484,8 @@
                             <textarea class="form-control" name="message" rows="6" placeholder="Type your message here..." required></textarea>
                         </div>
 
-                        <button type="submit" value='Send' id="submit" class="btn btn-default btn-light contact-btn">Send</button>
+                        <button type="submit" value='Send' id="submit" class="btn btn-default btn-light contact-btn" data-toggle="modal" 
+                        data-target="#alertModal">Send</button>
                     </form>
                 </div>
             </div>
@@ -492,6 +493,27 @@
     </section>
 
     <!--********/.CONTACT********-->
+    
+    <!--********MODAL********-->
+
+    <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thank you for contacting Tie the Knot</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <p>We are reviewing your enquiry and will be in touch shortly.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal" onClick="window.location.reload();">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!--********FOOTER********-->
