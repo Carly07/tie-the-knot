@@ -266,13 +266,14 @@ body {
     -moz-transition: -moz-transform 1s;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+/* Do a horizontal flip when you move the mouse over the flip box container */
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
@@ -319,10 +320,11 @@ body {
     text-align: left;
     font-size: medium;
     padding: 15px;
-    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 @media (min-width: 576px) {
