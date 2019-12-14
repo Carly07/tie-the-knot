@@ -2,6 +2,8 @@ $('body').scrollspy({ target: '#navbarScroll', offset: 50 });
 
 var map, places, infoWindow;
 
+var hostnameRegexp = new RegExp('^https?://.+?/');
+
 var countries = {
     'uk': {
         center: { lat: 54.8812882, lng: -3.6730459 },
@@ -39,59 +41,63 @@ function initMap() {
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
     searchBox.addListener('places_changed', function() {
-        var places = searchBox.getPlaces();
+            var places = searchBox.getPlaces();
 
-        if (places.length == 0) {
-            return;
-        }
-
-        // Clear out the old markers.
-        markers.forEach(function(marker) {
-            google.maps.event.clearListeners(marker, 'click');
-            marker.setMap(null);
-        });
-        markers = [];
-
-        // For each place, get the icon, name and location.
-        var bounds = new google.maps.LatLngBounds();
-        var count = 0;
-        places.forEach(function(place) {
-            if (!place.geometry) {
-                console.log("Returned place contains no geometry");
+            if (places.length == 0) {
                 return;
             }
-            var icon = {
-                url: place.icon,
-                size: new google.maps.Size(71, 71),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(17, 34),
-                scaledSize: new google.maps.Size(25, 25)
-            };
+
+            // Clear out the old markers.
+            markers.forEach(function(marker) {
+                google.maps.event.clearListeners(marker, 'click');
+                marker.setMap(null);
+            });
+            markers = [];
+
+            // For each place, get the icon, name and location.
+            var bounds = new google.maps.LatLngBounds();
+            var count = 0;
+            places.forEach(function(place) {
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                var icon = {
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(25, 25)
+                };
 
 
-            // Create a marker for each place.
-            markers.push(new google.maps.Marker({
-                map: map,
-                icon: icon,
-                title: place.name,
-                position: place.geometry.location
-            }));
+                // Create a marker for each place.
+                markers.push(new google.maps.Marker({
+                    map: map,
+                    icon: icon,
+                    title: place.name,
+                    position: place.geometry.location
+                }));
 
-            markers[count].placeResult = place;
+                markers[count].placeResult = place;
 
-            google.maps.event.addListener(markers[count], 'click', showInfoWindow);
+                google.maps.event.addListener(markers[count], 'click', showInfoWindow);
 
-            if (place.geometry.viewport) {
-                // Only geocodes have viewport.
-                bounds.union(place.geometry.viewport);
-            }
-            else {
-                bounds.extend(place.geometry.location);
-            }
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                }
+                else {
+                    bounds.extend(place.geometry.location);
+                }
 
-            count++;
-        });
-        map.fitBounds(bounds);
+                count++;
+
+            });
+            map.fitBounds(bounds);
+
+            // Add a marker clusterer to manage the markers.
+            var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
     });
 }
 
@@ -110,7 +116,7 @@ function showInfoWindow() {
 function buildIWContent(place) {
     document.getElementById('iw-icon').innerHTML = '<img class="hotelIcon" ' +
         'src="' + place.icon + '"/>';
-    document.getElementById('iw-url').innerHTML = '<b><a href="' + place.url +
+    document.getElementById('iw-url').innerHTML = '<b><a target="_blank" href="' + place.url +
         '">' + place.name + '</a></b>';
     document.getElementById('iw-address').textContent = place.vicinity;
 
@@ -123,8 +129,8 @@ function buildIWContent(place) {
         document.getElementById('iw-phone-row').style.display = 'none';
     }
 
-    // Assign a five-star rating to the hotel, using a black star ('&#10029;')
-    // to indicate the rating the hotel has earned, and a white star ('&#10025;')
+    // Assign a five-star rating to the supplier, using a black star ('&#10029;')
+    // to indicate the rating the supplier has earned, and a white star ('&#10025;')
     // for the rating points not achieved.
     if (place.rating) {
         var ratingHtml = '';

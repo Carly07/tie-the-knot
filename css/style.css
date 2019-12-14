@@ -377,13 +377,13 @@ body {
 #suppliers p {
     font-size: 1.5rem;
     letter-spacing: 3px;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 .supplier-form {
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #suppliers h3 {
@@ -392,10 +392,26 @@ body {
 }
 
 #map {
-    height: 400px;
+    height: 420px;
     width: auto;
-    margin-top: 40px;
+    
 }
+
+#supplierResults {
+        position: absolute;
+        width: 200px;
+        height: 470px;
+        overflow: auto;
+        left: 442px;
+        top: 0px;
+        cursor: pointer;
+        overflow-x: hidden;
+      }
+
+#resultsTable {
+        border-collapse: collapse;
+        width: 240px;
+      }
 
 .results-col{
     margin-top: 20px;
