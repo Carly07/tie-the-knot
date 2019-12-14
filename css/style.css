@@ -648,3 +648,10 @@ footer ul li a:hover {
 .copyright-col p {
     font-size: smaller;
 }
+
+/*------------Media Query------------*/
+@media (max-width: 1199.98px) {
+    #landing, #planning, #suppliers, #contact {
+        background-attachment: scroll;
+    }
+} 
