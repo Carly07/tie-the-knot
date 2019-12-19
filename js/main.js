@@ -1,4 +1,10 @@
+// Scrollspy feature
+
 $('body').scrollspy({ target: '#navbarScroll', offset: 50 });
+
+
+
+// Search for Suppliers Google Map Feature.
 
 var map, places, infoWindow;
 
