@@ -122,7 +122,7 @@ On the Contact form all users are required to enter their name, email, subject a
 
 ### Multiple browsers and devices
 
-After the site was deployed, I tested it across four browsers (Chrome, Safari, Internet Explorer, FireFox) and on multiple devices (Samsung Galaxy J3, iPhone 7 Plus, 8, iPad 6, iPad Air, MacBook Air, HP laptop and iMac) as well as on Responsinator to ensure compatibility and responsiveness. Whilst testing, I noticed that the flip cards were not rotating correctly on Safari. Having researched the problem, I found that adding a prefix in webkit and other browsers fixed the issue. 
+After the site was deployed, I tested it across four browsers (Chrome, Safari, Internet Explorer, FireFox) and on multiple devices (Samsung Galaxy J3, iPhone 7 Plus, 8, iPad 6, iPad Air, MacBook Air, HP laptop and iMac) as well as on Responsinator to ensure compatibility and responsiveness. Whilst testing, I noticed that the flip cards were not rotating correctly on Safari. Having researched the problem, I found that adding a prefix in webkit and other browsers fixed the issue. I also found that the alert modal was firing when the contact form was submit without all fields complete. The issue was fixed by manually calling the modal with javascript on submit. 
 
 ## Deployment
 
@@ -172,4 +172,6 @@ The search for suppliers google map code was customized from this example on <a 
 
 The form handling API code was customized from <a target="_blank" href="https://www.emailjs.com/">EmailJS</a> 
 
-<strong>This site is for educational purposes only.</strong> I received inspiration for this project from the many wedding sites that I visited whilst researching and planning my own wedding.
+Special thanks the my mentor, Antonio Rodriguez for your help and advice witht his project. 
+
+<strong>This site is for educational purposes only.</strong> 

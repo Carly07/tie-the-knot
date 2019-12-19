@@ -15,3 +15,7 @@ function sendMail(contactForm) {
     return false;
 }
 
+
+$(contactForm).on('submit',function(){
+   $('#alertModal').modal('show')
+});
